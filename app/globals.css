@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
+
+:root { --background:#f3f5f4; --foreground:#17211e; --card:#fff; --card-foreground:#17211e; --popover:#fff; --popover-foreground:#17211e; --primary:#0a5b48; --primary-foreground:#fff; --secondary:#eaf1ee; --secondary-foreground:#123c32; --muted:#eef2f0; --muted-foreground:#65726d; --accent:#f3c845; --accent-foreground:#28342f; --destructive:#b42318; --border:#d9e1de; --input:#cdd7d3; --ring:#16866b; --radius:.75rem; --page:#f3f5f4; --ink:#17211e; }
+@theme inline { --color-background:var(--background); --color-foreground:var(--foreground); --color-card:var(--card); --color-card-foreground:var(--card-foreground); --color-popover:var(--popover); --color-popover-foreground:var(--popover-foreground); --color-primary:var(--primary); --color-primary-foreground:var(--primary-foreground); --color-secondary:var(--secondary); --color-secondary-foreground:var(--secondary-foreground); --color-muted:var(--muted); --color-muted-foreground:var(--muted-foreground); --color-accent:var(--accent); --color-accent-foreground:var(--accent-foreground); --color-destructive:var(--destructive); --color-border:var(--border); --color-input:var(--input); --color-ring:var(--ring); --radius-sm:calc(var(--radius) - 4px); --radius-md:calc(var(--radius) - 2px); --radius-lg:var(--radius); --radius-xl:calc(var(--radius) + 4px); --font-sans:"Aptos","Segoe UI",Arial,sans-serif; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--page); color:var(--ink); font-family:"Aptos","Segoe UI",Arial,sans-serif; }
+button,input,textarea,select { font:inherit; }
+.panel { border:1px solid #d8dfdc; border-radius:1rem; background:white; box-shadow:0 5px 20px rgb(20 52 43 / 5%); }
+.caf-tabs-list { height:4.25rem !important; min-height:4.25rem; overflow:hidden; }
+.caf-tab { height:3.5rem !important; min-height:0; }
+.caf-tab[data-state="active"] { background:#07523f !important; color:#fff !important; box-shadow:0 1px 3px rgb(7 82 63 / 22%); }
+.caf-tab[data-state="active"] span { background:rgb(255 255 255 / 16%); }
+.workspace-grid { display:grid; grid-template-columns:230px minmax(0,1fr) 245px; gap:1rem; align-items:start; }
+.step { display:flex; align-items:center; gap:.75rem; border-radius:.75rem; padding:.65rem .75rem; text-align:left; color:#6b7772; }
+.step > span { display:grid; height:2rem; width:2rem; flex:none; place-items:center; border-radius:999px; background:#e8eeeb; font-size:.8rem; font-weight:700; }
+.step small,.step strong { display:block; }
+.step small { font-size:.68rem; text-transform:uppercase; letter-spacing:.08em; }
+.step strong { font-size:.9rem; color:#34403c; }
+.step.active { background:#e7f2ee; color:#07523f; }
+.step.active > span { background:#07523f; color:white; }
+.step.active strong,.step.done strong { color:#07523f; }
+.step.done > span { background:#dceee7; color:#07523f; }
+.eyebrow { font-size:.72rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; color:#6f7d77; }
+.variable-row { display:grid; grid-template-columns:24px minmax(0,1fr); gap:.75rem; border-bottom:1px solid #edf0ef; padding:1rem 1.25rem; transition:background .15s ease; }
+.variable-row.readonly { grid-template-columns:minmax(0,1fr); }
+.variable-row:hover { background:#fbfcfc; }
+.variable-row.selected { background:#f4faf7; box-shadow:inset 3px 0 #0a6d55; }
+code { border-radius:.38rem; background:#edf2f0; padding:.2rem .42rem; color:#07523f; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.78rem; font-weight:700; }
+.value-chip { border:1px solid #d9e2df; border-radius:999px; background:white; padding:.2rem .5rem; font-size:.72rem; color:#5d6a65; }
+.form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.25rem; }
+@media (max-width:1100px) { .workspace-grid { grid-template-columns:205px minmax(0,1fr); } .workspace-grid > aside:last-child { grid-column:1/-1; position:static; } }
+@media (max-width:760px) { .workspace-grid,.form-grid { grid-template-columns:1fr; } .workspace-grid > aside:first-child { position:static; } }
