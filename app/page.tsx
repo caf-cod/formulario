@@ -30,7 +30,7 @@ const localDateValue = () => {
   return `${year}-${month}-${day}`;
 };
 const initialForm: FormData = { institution: "", address: "", city: "", uf: "", process: "", representative: "", role: "", nationality: "Brasileira", cpf: "", email: "", phone: "", purpose: "", place: "", date: localDateValue(), territory: "", period: "", audience: "" };
-const destinationEmail = "caf@mda.gov.br";
+const destinationEmail = "caf.operacao@mda.gov.br";
 const classificationMeta: Record<DataClassification, { label: string; short: string; color: string; className: string; description: string }> = {
   personal: { label: "Dado pessoal", short: "Pessoal", color: "FFE600", className: "border-yellow-400 bg-yellow-100 text-yellow-900", description: "Identifica ou pode identificar diretamente uma pessoa natural." },
   sensitive: { label: "Dado pessoal sensível", short: "Sensível", color: "FF0000", className: "border-red-600 bg-red-600 text-white", description: "Revela categoria protegida pelo art. 5º, II, da LGPD." },
