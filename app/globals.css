@@ -33,3 +33,16 @@ code { border-radius:.38rem; background:#edf2f0; padding:.2rem .42rem; color:#07
 .form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.25rem; }
 @media (max-width:1100px) { .workspace-grid { grid-template-columns:205px minmax(0,1fr); } .workspace-grid > aside:last-child { grid-column:1/-1; position:static; } }
 @media (max-width:760px) { .workspace-grid,.form-grid { grid-template-columns:1fr; } .workspace-grid > aside:first-child { position:static; } }
+
+/* Cabeçalho institucional e margens compartilhadas */
+.caf-institutional-header{background:#fff}
+.caf-brand,.caf-title-inner,.caf-page-content{width:100%;max-width:1440px;margin-left:auto;margin-right:auto;padding-left:28px;padding-right:28px}
+.caf-brand{padding-top:14px;padding-bottom:14px;overflow:hidden}
+.caf-brand img{display:block;width:640px;max-width:100%;height:auto;position:relative;left:-20px}
+.caf-title-bar{background:#073a31;color:#fff}
+.caf-title-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:17px;padding-bottom:17px}
+.caf-title-label{display:block;font-size:10px;letter-spacing:.16em;font-weight:700;color:#c6dfd5;margin:0 0 3px}
+.caf-title-inner h1{color:#fff;font-size:24px;line-height:1.35;margin:0;font-weight:650;letter-spacing:-.025em}
+.caf-header-privacy{display:flex;align-items:center;gap:8px;font-size:12px;color:#e1eee8}
+@media(max-width:780px){.caf-brand,.caf-title-inner,.caf-page-content{padding-left:20px;padding-right:20px}.caf-brand{padding-top:12px;padding-bottom:12px}.caf-brand img{width:540px;left:calc(-1 * min(16.875px,3.125vw - 1.25px))}.caf-title-inner{padding-top:14px;padding-bottom:14px;flex-wrap:wrap;gap:10px}.caf-title-inner h1{font-size:21px}.caf-title-label{font-size:9px}}
+@media(max-width:480px){.caf-title-inner h1{font-size:19px}}
